@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, MainActivity!</string>
-    <string name="app_name">MagicLifeCounter</string>
-
+	<string name="app_name">MagicLifeCounter</string>
+    <string name="starting_life_total">20</string>
+	<string name="starting_damage_total">0</string>
+	<string name="plus_one_life">+1</string>
+	<string name="minus_one_life">-1</string>
+	<string name="start_stop_timer">Start</string>
+	<string name="roundtimer">50:00</string>
+	<string name="reset_timer">Reset</string>
+	
 </resources>
