@@ -151,8 +151,8 @@ public class MainActivity extends Activity {
 	
 	private void setLifeTotal(int id) {
 		Intent intent = new Intent(this, DisplayEditLife.class);
-		EditText editText = (EditText) findViewById(id);
-		String message = editText.getText().toString();
+		TextView textLifeTotal = (TextView) findViewById(id);
+		String message = textLifeTotal.getText().toString();
 		intent.putExtra("make this a variable.", message);
 		startActivity(intent);
 	}

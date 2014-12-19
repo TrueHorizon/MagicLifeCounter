@@ -12,18 +12,7 @@ public class DisplayEditLife extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-		// Get the message from the intent
-		Intent intent = getIntent();
-		String message = intent.getStringExtra("test");
-
-		// Create the text view
-		TextView textView = new TextView(this);
-		textView.setTextSize(40);
-		textView.setText(message);
-
-		// Set the text view as the activity layout
-		setContentView(textView);
+		setContentView(R.layout.setlife);
 	}
 
     @Override
