@@ -156,6 +156,7 @@ public class MainActivity extends Activity {
 		final TextView textLifeTotal = (TextView) findViewById(id);
 		final EditText input = new EditText(this);
 		input.setText(textLifeTotal.getText().toString());
+		input.setSelection(textLifeTotal.getText().length());
 		
 		// Inflate and set the layout for the dialog
 		// Pass null as the parent view because its going in the dialog layout
@@ -165,7 +166,7 @@ public class MainActivity extends Activity {
 			.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) { 
 					// Set life total on ok
-					textLifeTotal.setText(input.getText().toString());
+					textLifeTotal.setText(Integer.toString(Integer.parseInt(input.getText().toString())));
 				}
 			})
 			.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
