@@ -174,7 +174,7 @@ public class MainActivity extends Activity {
 					// do nothing
 				}
 			})
-			.show();
+			.show().getWindow().setLayout(200,200);
 	}
 	
 	// Start and pause timer functionality
