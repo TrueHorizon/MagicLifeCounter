@@ -7,6 +7,7 @@ import android.widget.*;
 import android.view.View.*;
 import android.content.res.*;
 import android.content.*;
+import android.support.v4.app.DialogFragment;
 
 public class MainActivity extends Activity {
 	private TextView textTimer;
@@ -150,11 +151,29 @@ public class MainActivity extends Activity {
 	}
 	
 	private void setLifeTotal(int id) {
-		Intent intent = new Intent(this, DisplayEditLife.class);
-		TextView textLifeTotal = (TextView) findViewById(id);
-		String message = textLifeTotal.getText().toString();
-		intent.putExtra("make this a variable.", message);
-		startActivity(intent);
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+		final TextView textLifeTotal = (TextView) findViewById(id);
+		final EditText input = new EditText(this);
+		input.setText(textLifeTotal.getText().toString());
+		
+		// Inflate and set the layout for the dialog
+		// Pass null as the parent view because its going in the dialog layout
+		builder
+			.setTitle("Set Life Total")
+			.setView(input)
+			.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) { 
+					// Set life total on ok
+					textLifeTotal.setText(input.getText().toString());
+				}
+			})
+			.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) { 
+					// do nothing
+				}
+			})
+			.show();
 	}
 	
 	// Start and pause timer functionality
@@ -209,7 +228,6 @@ public class MainActivity extends Activity {
 /* TODO
 
 icon
-set starting life
 +5 / -5 life
 mana pool
 keep running total of damage or lifegain
