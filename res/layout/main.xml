@@ -4,82 +4,90 @@
     android:layout_height="fill_parent"
     android:gravity="center"
     android:orientation="vertical" >
-
-	<!-- Oponent life total -->
-	<Button
-		android:id="@+id/plus_one_life_opponent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/plus_one_life"
-        android:onClick="addOneLifeOpp" />
-    <TextView
-		android:id="@+id/opponent_life_total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/starting_life_total"
-		android:inputType="number"
-		android:textSize="100sp"
-		android:freezesText="true"
-		android:onClick="setOppLifeTotal" />
-	<Button
-		android:id="@+id/minus_one_life_opponent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minus_one_life"
-        android:onClick="subtractOneLifeOpp" />
 	
-
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/opponent_grid"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:gravity="center"
-		android:orientation="horizontal" >
+		android:orientation="vertical" >
 
-		<!-- Opponent commander damage -->
+		<!-- Oponent life total -->
 		<Button
-			android:id="@+id/plus_one_cmd_damage_opponent"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/plus_one_life"
-			android:onClick="addOneCmdDamageOpp" />
-		<TextView
-			android:id="@+id/opponent_cmd_damage_total"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/starting_damage_total"
+			android:id="@+id/plus_one_life_opponent"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/plus_one_life"
+	        android:onClick="addOneLifeOpp" />
+	    <TextView
+			android:id="@+id/opponent_life_total"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/starting_life_total"
 			android:inputType="number"
-			android:textSize="20sp"
-			android:freezesText="true" />
+			android:textSize="100sp"
+			android:freezesText="true"
+			android:onClick="setOppLifeTotal" />
 		<Button
-			android:id="@+id/minus_one_cmd_damage_opponent"
+			android:id="@+id/minus_one_life_opponent"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/minus_one_life"
+	        android:onClick="subtractOneLifeOpp" />
+	
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_marginEnd="30dp"
-			android:text="@string/minus_one_life"
-			android:onClick="subtractOneCmdDamageOpp" />
+			android:gravity="center"
+			android:orientation="horizontal" >
+
+			<!-- Opponent commander damage -->
+			<Button
+				android:id="@+id/plus_one_cmd_damage_opponent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/plus_one_life"
+				android:onClick="addOneCmdDamageOpp" />
+			<TextView
+				android:id="@+id/opponent_cmd_damage_total"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/starting_damage_total"
+				android:inputType="number"
+				android:textSize="20sp"
+				android:freezesText="true" />
+			<Button
+				android:id="@+id/minus_one_cmd_damage_opponent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="30dp"
+				android:text="@string/minus_one_life"
+				android:onClick="subtractOneCmdDamageOpp" />
 		
-		<!-- Opponent infect damage -->
-		<Button
-			android:id="@+id/plus_one_infect_damage_opponent"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/plus_one_life"
-			android:onClick="addOneInfectDamageOpp" />
-		<TextView
-			android:id="@+id/opponent_infect_total"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/starting_damage_total"
-			android:inputType="number"
-			android:textSize="20sp"
-			android:freezesText="true" />
-		<Button
-			android:id="@+id/minus_one_infect_damage_opponent"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="@string/minus_one_life"
-			android:onClick="subtractOneInfectDamageOpp" />
+			<!-- Opponent infect damage -->
+			<Button
+				android:id="@+id/plus_one_infect_damage_opponent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/plus_one_life"
+				android:onClick="addOneInfectDamageOpp" />
+			<TextView
+				android:id="@+id/opponent_infect_total"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/starting_damage_total"
+				android:inputType="number"
+				android:textSize="20sp"
+				android:freezesText="true" />
+			<Button
+				android:id="@+id/minus_one_infect_damage_opponent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/minus_one_life"
+				android:onClick="subtractOneInfectDamageOpp" />
 
+		</LinearLayout>
 	</LinearLayout>
 	
 	<!-- Round timer -->

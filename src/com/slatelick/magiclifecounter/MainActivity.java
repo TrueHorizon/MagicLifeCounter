@@ -10,7 +10,8 @@ import android.support.v4.app.DialogFragment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;	
+import android.widget.TextView;
+import android.widget.LinearLayout;	
 
 public class MainActivity extends Activity {
 	private TextView textTimer;
@@ -227,17 +228,27 @@ public class MainActivity extends Activity {
 		secs = secs % 60;
 		textTimer.setText(mins + ":" + String.format("%02d", secs));
 	}
+	
+	public void rotateOpponentLifeCounter() {
+		LinearLayout mainLayout = (LinearLayout) findViewById(R.id.opponent_grid);
+		mainLayout.setRotation(180);
+	}
 }
 
 /* TODO
-
+swipe for options
+	rotate life total
+	enable mana pool
+	enable infect
+	enable commander damage
 icon
 +5 / -5 life
 mana pool
+storm counter
 keep running total of damage or lifegain
 add card name search to write down what did damage
 upkeep or end step trigger reminder
 die roll
 coin flip
-flip opp life total and buttons
+refactor layout code
 */
