@@ -1,7 +1,7 @@
 package com.slatelick.magiclifecounter;
+
 import android.app.Fragment;
 import android.os.Bundle;
-import java.nio.*;
 
 public class DataFragment extends Fragment
 {

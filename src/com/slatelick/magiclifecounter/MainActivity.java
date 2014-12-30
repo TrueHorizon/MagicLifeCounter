@@ -1,13 +1,16 @@
 package com.slatelick.magiclifecounter;
 
-import android.app.*;
-import android.os.*;
-import android.view.*;
-import android.widget.*;
-import android.view.View.*;
-import android.content.res.*;
-import android.content.*;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.FragmentManager;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v4.app.DialogFragment;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;	
 
 public class MainActivity extends Activity {
 	private TextView textTimer;
